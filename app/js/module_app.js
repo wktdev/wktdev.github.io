@@ -2,6 +2,7 @@ var MODULE = (function Module() {
 
     var app = {
         alphabet: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
+        levelWordList: [],
         matrix: [],
         wordLength: undefined,
         usersCorrectAnswers: [],
@@ -107,13 +108,13 @@ var MODULE = (function Module() {
         },
 
         createWord: function(count) {
-            var selectedWordArr = gameWordList[0].word.split("");
+            var selectedWordArr = app.levelWordList[0].word.split("");
             selectedWordArr.forEach(function(val, index, arr) {
                 app.matrix.push(app.findSurroundingLetters(app.alphabet, val))
             });
             app.createInterface(app.matrix)
             console.log(getAnswers(app.matrix));
-            $(".total-number-of-answers").text(gameWordList[0].answers.length);
+            $(".total-number-of-answers").text(app.levelWordList[0].answers.length);
 
         },
 
@@ -175,6 +176,19 @@ var MODULE = (function Module() {
         },
 
         pointCheck_getNumberOfDifferingLetters: function() {
+            var number = 0;
+
+            function checkArrayEquality(arr1, arr2) {
+
+                if (arr1.length !== arr2.length)
+                    return false;
+                for (var i = arr1.length; i--;) {
+                    if (arr1[i] !== arr2[i])
+                        return false
+                }
+
+                return true
+            }
 
         },
 
@@ -202,7 +216,7 @@ var MODULE = (function Module() {
                 }
                 console.log(word);
 
-                var answer = app.checkAnswer(gameWordList, word, app.questionCount);
+                var answer = app.checkAnswer(app.levelWordList, word, app.questionCount);
                 var isPreviousAnswer = app.checkForPreviousAnswer(word, app.usersCorrectAnswers)
 
                 if (answer && (!isPreviousAnswer)) {
@@ -254,20 +268,21 @@ var MODULE = (function Module() {
         },
 
 
-        run: function(wordLength) {
+        run: function(wordLength, wordData) {
+            console.log(wordData);
             app.userSubmit();
+            app.wordLength = wordLength;
+            app.levelWordList = wordData;
             app.createWord(app.questionCount);
-            app.wordLength = wordLength
 
         }
     }
 
-
+    console.log(app.levelWordList);
     return app;
 
 
 }());
 
 var app = MODULE;
-
-app.run(5);
+app.run(5, gameWordList);
