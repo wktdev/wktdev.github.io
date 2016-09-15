@@ -7,7 +7,6 @@ var MODULE = (function Module() {
         usersCorrectAnswers: [],
         questionCount: 0,
         totalPoints: 0,
-        currentWord: app.matrix[app.questionsCount],
         findSurroundingLetters: function(alphabet, letter) {
             var rowOfLetters = [];
             var indexOfLetter = alphabet.indexOf(letter);
