@@ -57,26 +57,20 @@ function createInterface(arr) {
         });
         val.forEach(function(val2, index2, arr2) {
 
-
             $(".letter-column").eq(index).append("<li class='letter'>" + val2 + "</li>");
 
             $(".letter-column").sortable({
                 axis: 'y',
-                containment: "parent"
+                containment: "parent",
+
             });
-
         })
-
     });
-
-
 }
 
 
 
 function checkForPreviousAnswer(word, arr) {
-
-
     if (arr.includes(word)) {
         console.log("You already guessed " + word + " silly");
         return true
@@ -95,16 +89,15 @@ function checkAnswer(arr, word, index) {
             correct = true;
         }
     });
-
     return correct;
 }
+
 
 function displayUsersAnswers() {
     $(".correct-answers").empty();
     usersCorrectAnswers.forEach(function(val) {
         $(".correct-answers").append("<li>" + val + "</li>")
-    })
-
+    });
 }
 
 
@@ -141,6 +134,7 @@ $(function() {
 
     $("#answer-submit-button").on("click", function() {
         var word = "";
+
         for (var i = 0; i <= 5; i += 1) {
 
             var x = $("#letter-containers").children().eq(i).children().eq(2).text();
@@ -154,24 +148,28 @@ $(function() {
         if (answer && (!isPreviousAnswer)) {
             usersCorrectAnswers.push(word);
 
-
-
-            var y = $("#letter-containers > ul > li:nth-child(3) ");
-            y.effect("bounce", {
+            var centerRow = $("#letter-containers > ul > li:nth-child(3) ");
+            centerRow.effect("bounce", {
                 times: 2
-            }, 1200);
+            }, 1200, function() {
 
+                $("#letter-containers").fadeOut(700, function() {
+                    createInterface(matrix)
+                    $(this).fadeIn(700)
 
+                })
+            });
 
 
         } else {
-            var y = $("#letter-containers ");
+            var centerRow = $("#letter-containers ");
 
-            y.effect("shake", {
+            centerRow.effect("shake", {
                 times: 1
             }, 500);
 
         }
+
         console.log(usersCorrectAnswers.length);
         displayUsersAnswers()
         $(".correct-answer-count").text(usersCorrectAnswers.length);
@@ -181,13 +179,5 @@ $(function() {
             $("body").append("<h1> YOU WIN </h1>");
         }
     })
-
-
-
-
-
-
-
-
 
 });
