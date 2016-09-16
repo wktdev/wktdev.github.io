@@ -15,36 +15,50 @@ body {
 }
 
 #letter-containers {
-	width:83%;
-	margin:auto;
-	height:300px;
+	width: 83%;
+	margin: auto;
+	height: 300px;
+}
 
+.correct-word {
+	margin-right: 1.5em;
 }
 
 .correct-answers {
-	margin: 0px;
-	padding: 0px;
+	height: 500px;
 }
 
 .correct-answers > li {
-	background-color: orange;
-	margin-bottom: 3px;
 	list-style-type: none;
-	font-size: 1.5em;
+	font-size: 1.1em;
+	display: inline-block;
+	color:rgba(0, 148, 133, 0.79);
 }
 
 #answer-submit-button {
-	margin-right:22%;
+	margin-right: 22%;
 	margin-top: 20px;
 	float: right;
 }
 
+.arrow-image {
+	height:30px;
+	display:inline-block;
+	left: 15%;
+	width:75%;
+opacity:0.3;
+	margin:auto;
+    position: absolute;
+    bottom: 5px;
+}
+
 .letter-column {
+	position:relative;
 	width: 19.9%;
 	height: 300px;
 	border-style: solid;
 	float: left;
-	
+
 }
 
 ul {
@@ -60,10 +74,8 @@ ul {
 	height: 50px;
 	border-top-style: solid;
 	border-bottom-style: solid;
-
-
-color:black;
-background-color: hsla(231, 48%, 48%, 0.34);
+	color: black;
+	background-color: hsla(231, 48%, 48%, 0.34);
 }
 
 .letter:nth-child(3) {
