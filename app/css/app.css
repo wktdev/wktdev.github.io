@@ -94,3 +94,11 @@ ul {
 	outline-style: solid;
 	float: left;
 }
+p{
+
+    font-size: inherit;
+    line-height: 1.6;
+    margin-bottom: 0.1rem;
+    text-rendering: optimizeLegibility;
+
+}

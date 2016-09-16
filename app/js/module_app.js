@@ -284,6 +284,8 @@ var MODULE = (function Module() {
                 if (answer && (!isPreviousAnswer)) {
                     app.usersCorrectAnswers.push(word);
                     app.tallyPoints(word)
+                    $(".total-points").html(app.totalPoints);
+
 
 
                     var centerRow = $("#letter-containers > ul > li:nth-child(3) ");

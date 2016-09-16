@@ -80,8 +80,6 @@ function checkForPreviousAnswer(word, arr) {
 }
 
 
-
-
 function checkAnswer(arr, word, index) {
     var correct = false;
     arr[index].answers.forEach(function(val) {
