@@ -192,15 +192,16 @@ body {
 	border-color: transparent #fff transparent transparent;
 }
 
-.title-bar{
-	display:none
+.no-js .top-bar {
+  display: none;
 }
 
+@media screen and (min-width: 40em) {
+  .no-js .top-bar {
+    display: block;
+  }
 
-.top-bar {
+  .no-js .title-bar {
     display: none;
-
- 
+  }
 }
-
-
