@@ -332,6 +332,13 @@
                       });
 
 
+
+                      app.displayUsersAnswers();
+                      app.displayColumnMovePoints();
+                      app.displayNumberOfChangedLettersPoints();
+                      app.displayLetterPoints(word)
+
+
                   } else {
                       var centerRow = $("#letter-containers ");
 
@@ -352,11 +359,6 @@
 
                   }
 
-
-                  app.displayUsersAnswers();
-                  app.displayColumnMovePoints();
-                  app.displayNumberOfChangedLettersPoints();
-                  app.displayLetterPoints(word)
                   $(".correct-answer-count").text(app.usersCorrectAnswers.length);
 
                   if (app.usersCorrectAnswers.length === 5) {
