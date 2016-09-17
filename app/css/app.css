@@ -43,6 +43,10 @@ body {
 	float: right;
 }
 
+.letters-used > li{
+	margin-right:5px;
+}
+
 .arrow-image {
 	height: 30px;
 	display: inline-block;

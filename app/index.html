@@ -26,17 +26,14 @@
   </div>
   <div class="top-bar-right">
     <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
-   <!--    <li class="has-submenu">
-     <a href="#">Instructions/a>
-     <ul class="submenu menu vertical" data-submenu>
-       <li><a href="#">One</a></li>
-       <li><a href="#">Two</a></li>
-       <li><a href="#">Three</a></li>
-     </ul>
-   </li> -->
+
       <li><a href="#">Instructions</a></li>
       <li><a href="#">Your Awards</a></li>
-      <li><a href="#">Join Interactive World</a></li>
+      <li class="has-submenu"><a href="#">Join Interactive World</a>
+        <ul class="submenu menu vertical" data-submenu>
+       <li><a href="#">Coming Soon</a></li>
+
+      </li>
     </ul>
   </div>
 </div>
@@ -79,15 +76,11 @@
           <p >Total Points: <span class="total-points">0</span></p>
           <div class="points-for-last-turn">
             <h5>Last Answer</h5>
-            <p>Static Columns:<span></span></p>
-            <p>Letter Moves:<span></span></p>
+            <p>Static Columns:<span class="static-column-point"></span></p>
+            <p>Letter Moves:<span class="letter-moves"></span></p>
             <p>Letters Used:</p>
             <ul class="letters-used">
-            <li>A:+7</li>
-              <li>B:+7</li>
-                <li>C:+7</li>
-                  <li>D:+7</li>
-                    <li>E:+7</li>
+   
               
             </ul>
           </div>
@@ -112,6 +105,6 @@
 
 
    
-      <script src="js/module_app.js"></script>
+      <script src="js/app.js"></script>
     </body>
   </html>
