@@ -18,6 +18,8 @@ body {
 	width: 83%;
 	margin: auto;
 	height: 300px;
+	position:relative;
+	top:50px;
 }
 
 .correct-word {
@@ -32,33 +34,32 @@ body {
 	list-style-type: none;
 	font-size: 1.1em;
 	display: inline-block;
-	color:rgba(0, 148, 133, 0.79);
+	color: rgba(0, 148, 133, 0.79);
 }
 
 #answer-submit-button {
 	margin-right: 22%;
-	margin-top: 20px;
+	margin-top: 70px;
 	float: right;
 }
 
 .arrow-image {
-	height:30px;
-	display:inline-block;
+	height: 30px;
+	display: inline-block;
 	left: 15%;
-	width:75%;
-opacity:0.3;
-	margin:auto;
-    position: absolute;
-    bottom: 5px;
+	width: 75%;
+	opacity: 0.3;
+	margin: auto;
+	position: absolute;
+	bottom: 5px;
 }
 
 .letter-column {
-	position:relative;
+	position: relative;
 	width: 19.9%;
 	height: 300px;
 	border-style: solid;
 	float: left;
-
 }
 
 ul {
@@ -94,11 +95,99 @@ ul {
 	outline-style: solid;
 	float: left;
 }
-p{
 
-    font-size: inherit;
-    line-height: 1.6;
-    margin-bottom: 0.1rem;
-    text-rendering: optimizeLegibility;
+p {
+	font-size: inherit;
+	line-height: 1.6;
+	margin-bottom: 0rem;
+}
 
+.letters-used > li {
+	display: inline-block;
+}
+
+.points-for-last-turn > h5 {
+	font-size: 100%;
+	margin: 0px;
+	font-weight: bold;
+}
+
+.points-for-last-turn {
+	font-size: 80%;
+}
+
+
+
+
+
+body {
+	margin-top: 0rem;
+}
+
+.title-bar {
+	background: #333;
+	padding: 0.9rem;
+	display:none;
+}
+
+.top-bar {
+	background: #333;
+}
+
+.top-bar ul {
+	background: #333;
+}
+
+.top-bar ul li {
+	background: #333;
+}
+
+.top-bar ul li a {
+	color: #fff;
+}
+
+.menu-text {
+	color: #fff;
+}
+
+@media only screen and (max-width:40em) {
+	.menu-text {
+		display: none !important;
+	}
+
+}
+
+@media only screen and (min-width:40em) {
+	.menu:last-child {
+		border-left: 1px solid #4e4e4e;
+	}
+
+	.menu:first-child {
+		border-left: none;
+	}
+
+	.menu li:not(:last-child) {
+		border-right: 1px solid #4e4e4e;
+	}
+
+}
+
+.dropdown.menu .submenu {
+	border: none;
+}
+
+.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after {
+	border-color: #fff transparent transparent;
+}
+
+.is-drilldown-submenu-parent > a::after {
+	border-color: transparent transparent transparent #fff;
+}
+
+.js-drilldown-back::before {
+	border-color: transparent #fff transparent transparent;
+}
+
+.title-bar{
+	display:none
 }
