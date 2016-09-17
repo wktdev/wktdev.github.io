@@ -195,3 +195,17 @@ body {
 .title-bar{
 	display:none
 }
+
+.title-bar {    
+    @include breakpoint(medium) {
+        display: none;
+    }
+}
+
+.top-bar {
+    display: none;
+
+    @include breakpoint(medium) {
+        display: block;
+    }
+}
