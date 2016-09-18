@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Words Mill</title>
+    <title>Word Puppy</title>
     <script src="http://livejs.com/live.js"></script>
     
     <link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
@@ -52,6 +52,11 @@
         <div class="row">
           
           <div class="large-6 medium-6 small-6 columns">
+          <div class="possible-answers-box">
+           <p><span class="total-number-of-answers">0</span> possible answers</p>
+              <p>Correct answers: <span class="correct-answer-count">0</span></p>
+             
+          </div>
           </div>
           <div class="large-6 medium-6 small-6 columns">
             
@@ -62,19 +67,19 @@
         
       
         <div class="row">
-          <div class="large-6 medium-6 small-6 columns">
-            <div class="box-x">
-              <p><span class="total-number-of-answers">0</span> possible answers</p>
-              <p>Correct answers: <span class="correct-answer-count">0</span></p>
-              <ul class="correct-answers">
+
+        <div class="large-6 medium-6 small-6 columns">
+         <ul class="correct-answers">
                 
               </ul>
-            </div>
-          </div>
+        <div class="placeholder"></div>
+        </div>
+
           <div class="large-6 medium-6 small-6 columns">
+          <div class="points-breakdown-box">
           <p >Total Points: <span class="total-points">0</span></p>
           <div class="points-for-last-turn">
-            <h5>Last Correct Answer Points</h5>
+            <h5>Points for Last Answer</h5>
             <p>Static Columns:<span class="static-column-point"></span></p>
             <p>Letter Moves:<span class="letter-moves"></span></p>
             <p>Letters Used:</p>
@@ -83,7 +88,7 @@
               
             </ul>
       
-          
+          </div>
           
           
         </div>

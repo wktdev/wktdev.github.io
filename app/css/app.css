@@ -14,6 +14,14 @@ body {
 	padding: 30px;
 }
 
+.possible-answers-box{
+	padding-top:16px;
+	padding-left: 15%;
+    margin: auto;
+    width: 90%;
+   
+}
+
 #letter-containers {
 	width: 83%;
 	margin: auto;
@@ -22,17 +30,39 @@ body {
 	top:10px;
 }
 
+.points-breakdown-box{
+	
+	margin-right: 25%;
+	margin-top: 0px;
+	float: right;
+
+}
+
+
+.points-breakdown-box  > *{
+
+
+}
+
+.placeholder{
+	height:250px;
+	width:250px;
+}
 .correct-word {
-	margin-right: 1.5em;
+	
 }
 
 .correct-answers {
-	height: 500px;
+
+	margin-left:20%;
+
+
 }
 
 .correct-answers > li {
+	margin-right: 0.5em;
 	list-style-type: none;
-	font-size: 1.1em;
+	font-size: 0.8em;
 	display: inline-block;
 	color: rgba(0, 148, 133, 0.79);
 }
@@ -205,3 +235,4 @@ body {
     display: none;
   }
 }
+
