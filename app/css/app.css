@@ -15,13 +15,25 @@ body {
 }
 
 .possible-answers-box{
-	padding-top:16px;
+	padding-top:26px;
 	padding-left: 15%;
     margin: auto;
     width: 90%;
    
 }
 
+.possible-answers-box > p {
+	font-size: 0.7em;
+}
+
+.total-points-box{
+	padding-top:16px;
+	padding-left: 15%;
+    margin: auto;
+    width: 90%;
+    font-size:0.9em;
+
+}
 #letter-containers {
 	width: 83%;
 	margin: auto;
@@ -31,16 +43,18 @@ body {
 }
 
 .points-breakdown-box{
-	
-	margin-right: 25%;
-	margin-top: 0px;
-	float: right;
+	padding-top:26px;
+	padding-left: 15%;
+    margin: auto;
+    height:800px;
+    width: 90%;
 
 }
 
 
-.points-breakdown-box  > *{
-
+.points-breakdown-box p{
+		font-size:0.8em;
+	
 
 }
 
@@ -68,9 +82,11 @@ body {
 }
 
 #answer-submit-button {
-	margin-right: 22%;
-	margin-top: 20px;
-	float: right;
+width: 78.5%;
+	margin: auto;
+	position:relative;
+	top:20px;
+	left:10.5%;
 }
 
 .letters-used > li{

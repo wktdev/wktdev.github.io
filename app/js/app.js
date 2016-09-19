@@ -246,6 +246,23 @@
 
           },
 
+          getMedalNumber: function() {
+
+              var val = app.levelWordList[app.questionCount].answers.length / 3;
+              var numberOfCorrectAnswers = app.usersCorrectAnswers.length;
+
+              if (numberOfCorrectAnswers >= val * 3) {
+                  // medal is gold
+              } else if (numberOfCorrectAnswers >= val * 2) {
+                  // medal is silver
+              } else if (numberOfCorrectAnswers === val) {
+                  // medal is bronze
+              } else {
+                  // didn't pass level
+              }
+
+          },
+
           tallyPoints: function(userSubmittedWord) {
               app.columnMovePoints = 0;
               if (app.pointCheck_checkIfColumnsHaveNotMoved()) {
