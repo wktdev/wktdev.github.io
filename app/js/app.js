@@ -41,6 +41,7 @@
           columnMovePoints: 0,
           totalPoints: 0,
 
+
           createMatchArray: function(wordLength) {
               var data = [];
               var length = wordLength; // user defined length
@@ -246,20 +247,33 @@
 
           },
 
-          getMedalNumber: function() {
+          getMedal: function() {
 
-              var val = app.levelWordList[app.questionCount].answers.length / 3;
-              var numberOfCorrectAnswers = app.usersCorrectAnswers.length;
 
-              if (numberOfCorrectAnswers >= val * 3) {
-                  // medal is gold
-              } else if (numberOfCorrectAnswers >= val * 2) {
-                  // medal is silver
-              } else if (numberOfCorrectAnswers === val) {
-                  // medal is bronze
+
+              var allCorrect = app.levelWordList[app.questionCount].answers.length;
+              var userAnswers = app.usersCorrectAnswers.length;
+              var getPercent = userAnswers / allCorrect
+              var percentValue = (getPercent * 100).toFixed(2);
+              console.log(percentValue);
+
+              if (percentValue >= 100) {
+                  console.log("Gold + platinum medal");
+              } else if (percentValue >= 90 && percentValue <= 99) {
+                  console.log("Gold medal");
+
+              } else if (percentValue >= 75 && percentValue <= 89) {
+                  console.log("Silver medal");
+
+              } else if (percentValue >= 60 && percentValue <= 74) {
+                  console.log("Bronze medal");
+
               } else {
-                  // didn't pass level
+                  console.log("no medal yet");
               }
+
+
+
 
           },
 
@@ -388,12 +402,12 @@
 
                   $(".correct-answer-count").text(app.usersCorrectAnswers.length);
 
-                  if (app.usersCorrectAnswers.length === 5) {
-                      $("body").empty();
-                      $("body").append("<h1> YOU WIN </h1>");
-                  }
+                  // if (app.usersCorrectAnswers.length === 5) {
+                  //     $("body").empty();
+                  //     $("body").append("<h1> YOU WIN </h1>");
+                  // }
 
-
+                  console.log(app.getMedal());
 
 
               })
