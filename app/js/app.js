@@ -314,6 +314,14 @@
 
           },
 
+          displayWrongAnswerPoints: function() {
+
+              $(".static-column-point").text("0");
+              $(".letter-moves").text("0");
+              $(".letters-used ").empty()
+
+          },
+
           //______________________________________END Check how many columns moved on user submission
           userSubmit: function() {
               $("#answer-submit-button").on("click", function() {
@@ -372,6 +380,8 @@
                           $('.letter:nth-child(3)').css("background-color", 'rgba(255, 235, 59, 0.51)');
                           app.createInterface(app.matrix)
                       });
+
+                      app.displayWrongAnswerPoints()
 
 
                   }
