@@ -247,19 +247,22 @@
 
           },
 
+
+
           getMedal: function() {
-
-
 
               var allCorrect = app.levelWordList[app.questionCount].answers.length;
               var userAnswers = app.usersCorrectAnswers.length;
               var getPercent = userAnswers / allCorrect
               var percentValue = (getPercent * 100).toFixed(2);
               console.log(percentValue);
+              console.log(allCorrect - 1);
+              console.log("user correct answers: " + userAnswers);
 
               if (percentValue >= 100) {
-                  console.log("Gold + platinum medal");
-              } else if (percentValue >= 90 && percentValue <= 99) {
+                  console.log("platinum medal");
+
+              } else if ((userAnswers === (allCorrect - 1)) || (percentValue >= 90 && percentValue <= 99)) {
                   console.log("Gold medal");
 
               } else if (percentValue >= 75 && percentValue <= 89) {
