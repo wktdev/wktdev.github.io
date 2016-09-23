@@ -260,19 +260,19 @@
               console.log("user correct answers: " + userAnswers);
 
               if (percentValue >= 100) {
-                  console.log("platinum medal");
+                  return "Platinum";
 
               } else if ((userAnswers === (allCorrect - 1)) || (percentValue >= 90 && percentValue <= 99)) {
-                  console.log("Gold medal");
+                  return "Gold";
 
               } else if (percentValue >= 75 && percentValue <= 89) {
-                  console.log("Silver medal");
+                  return "Silver";
 
               } else if (percentValue >= 60 && percentValue <= 74) {
-                  console.log("Bronze medal");
+                  return "Bronze";
 
               } else {
-                  console.log("no medal yet");
+                  return "None";
               }
 
 
@@ -339,6 +339,12 @@
 
           },
 
+          displayMedal: function() {
+              $(".current-medal").empty();
+              $(".current-medal").text(app.getMedal())
+
+          },
+
           //______________________________________END Check how many columns moved on user submission
           userSubmit: function() {
               $("#answer-submit-button").on("click", function() {
@@ -379,6 +385,7 @@
                       app.displayColumnMovePoints();
                       app.displayNumberOfChangedLettersPoints();
                       app.displayLetterPoints(word)
+                      app.displayMedal();
 
 
                   } else {

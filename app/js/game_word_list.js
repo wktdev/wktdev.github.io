@@ -1,7 +1,6 @@
 var gameWordList = [{
     word: 'hello',
     answers: [
-        "hello",
         "felon",
         "flock",
         "gnome",
