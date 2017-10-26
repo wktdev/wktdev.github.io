@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html ng-app="ngApp"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Angular Markdown Demo</title>
+  <meta name="description" content="Angular md directive demo page.">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div class="container pure-g-r">
+    <div class="example pure-u-1">
+      <h2>Static Inline Markdown Renderer</h2>
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <md>
+## Example 1
+This directive renders [Markdown](http://daringfireball.net/projects/markdown/) text. It's built on blazingly fast markdown parser [marked](https://github.com/chjj/marked).
+
+- This is a bullet point 1.
+- This is a bullet point 2.
+- This is a bullet point 3.
+
+Code block is supported, too:
+
+```js
+for (var i = 0; i < 10; i++) {
+  console.log('angular-md is cool!');
+}
+```
+          </md>
+        </div>
+      </div>
+    </div>
+
+    <div class="example pure-u-1">
+      <h2>Static Remote Markdown Renderer</h2>
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <md ng-include="'text.md'"></md>
+        </div>
+      </div>
+    </div>
+
+    <div class="example pure-u-1">
+      <h2>Dynamic Markdown Renderer</h2>
+      <div class="pure-g" ng-controller="Ex3Ctrl">
+        <div class="pure-u-1-2">
+          <textarea ng-model="mdText" cols="30" rows="10"></textarea>
+        </div>
+        <div class="pure-u-1-2">
+          <md ng-model="mdText"></md>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="marked.js"></script>
+  <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+  <script src="angular.js"></script>
+  <script src="angular-md.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
