@@ -136,6 +136,7 @@ ReactDOM.render(
 
 
 // NOTES ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// How to Convert to ES6 classes --->  https://www.newmediacampaigns.com/blog/refactoring-react-components-to-es6-classes
 
 /*___________________BEGIN how to work with state
 
