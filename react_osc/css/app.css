@@ -21,7 +21,7 @@ label{
 }
 
 li{
-	display:inline-block;
+    display:inline-block;
 	text-align:center;
 }
 
@@ -31,10 +31,25 @@ nav{
 }
 .circle-freq-text{
 	position:relative;
-	top:25px;
+    text-align:center;
 }
 
+.osc-box{
+    display:inline;
+}
 
+.delete-osc {
+    position: relative;
+    background-color: grey;
+    opacity: 0.5;
+    width: 20px;
+    bottom: 33px;
+    text-align: center;
+    left: 60px;
+    height: 20px;
+    border-radius: 50%;
+    border-style: solid;
+}
 input{
 	  /* Size and position */
     position: relative; /* Enable absolute positioning for children and pseudo elements */
@@ -71,4 +86,3 @@ select{
     font-weight: bold;
 }
 
-}
