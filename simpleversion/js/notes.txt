@@ -1,0 +1,15 @@
+Benchmark 1: Record , save file to disk. Load file via waveform.js. Play from beginning.
+
+
+Benchmark 2: Record and snapshot the time recorded in relation to the 
+beginning of the clock. Only playback recording at that point. 
+
+
+
+Set playback time:
+
+snapshot audioContext.currenttime when user hits record. When done recording load file into buffer and inject it into nodegraph.
+Set playback
+time to the value of previously stored audioContext.currentTimefor recording
+
+recording time - play button time.
