@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>JavaScript for Sound Artists</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.js" charset="utf-8"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="https://checkout.stripe.com/v3/checkout/button.css"></link>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/small-business.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Heading Row -->
+        <img id="waveform-image" src="images/waveform.png" alt="">
+        <div class="code">
+            <code>
+
+
+                var audioContext = new AudioContext();<br>
+
+                var oscillator1 = audioContext.createOscillator();<br>
+                var stereoPanner1 = audioContext.createStereoPanner();<br>
+                stereoPanner1.pan.value = -0.5;<br>
+                oscillator1.connect(stereoPanner);<br>
+                stereoPanner1.connect(audioContext.destination);<br>
+                oscillator1.start(audioContext.currentTime);<br>
+                var oscillator2 = audioContext.createOscillator();<br>
+
+
+
+
+
+          </code>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="opening-statement">Learn JavaScript the <i>sound</i> way </h1>
+                <p>If you're a musician, DJ, sound performance artist or audio engineer and want to learn the art of programming then you have come to the right place. Here you will learn to code using the worlds most popular programming language while building interactive audio apps.</p>
+                <br>
+                <div class="deal-box">
+                    <br>
+                    <!--  <p>Upon payment a mentor will contact you by email to schedule your first meeting</p>
+                       <form action="/" method="POST">
+                           <script
+                           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                           data-key="pk_test_2vzqy4IW9zHAYyKSjDNZkd2l"
+                           data-amount="14900"
+                           data-name="Demo Site"
+                           data-description="Subscription $149"
+                           data-image="images/stripe_image.png"
+                           data-locale="auto">
+                           </script>
+                       </form>
+                       <br> -->
+                    <form action="https://www.amazon.com/JavaScript-Sound-Artists-Learn-Audio/dp/1138961531/ref=sr_1_1?ie=UTF8&qid=1483850669&sr=8-1&keywords=javascript+for+sound" method="GET">
+                        <input class="btn get-book-button" type="submit" value="Buy the Book">
+                    </form>
+                    
+                    <a href="code.zip"><input class="btn get-code-button" type="submit" value="Download the Code">
+</a>
+
+      <a href="https://www.pluralsight.com/courses/web-audio-api-introduction"><input class="btn get-code-button" type="submit" value="Pluralsight Videos">
+</a>
+                </div>
+                  <h1 class="opening-statement">Are you an educator?</h1>
+                 <p>You can request a free digital copy <a href="https://www.routledge.com/resources/compcopy/9781138961531"><u>here</u></a>. The book is an excellent complimentary text for any digital or sound arts program.</p>
+            </div>
+            <!-- /.col-md-4 -->
+            <div class="col-md-6">
+                <img class="img-responsive img-rounded" src="images/book_cover.jpg" alt="">
+            </div>
+            <!-- /.col-md-8 -->
+        </div>
+        <!-- /.row -->
+        <hr>
+        <!-- Call to Action Well -->
+        <div class="row">
+            <div class="col-lg-12">
+                <!--              <div class="well text-center">
+                        <h2 class="title-block">How it works</h2>
+                    </div> -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <!-- Content Row -->
+        ow -->
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <!--          <div class="col-lg-12">
+                        <p>Copyright &copy; JavaScript for Sound Artists 2015-2016</p>
+                    </div> -->
+            </div>
+        </footer>
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+<link href="css/app.css" rel="stylesheet">
+
+</html>
