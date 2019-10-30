@@ -62,15 +62,14 @@ p {
 }
 code {
   background-color: transparent;
-  display: block;
+  display: inline-block;
   color: rgba(9, 255, 45, 0.14);
   font-size: 2em;
 }
 .code {
   position: absolute;
   top: 300px;
-  margin: 0 auto;
-  width: 1000px;
+  width: 100px;
 }
 body::after {
   content: "";
