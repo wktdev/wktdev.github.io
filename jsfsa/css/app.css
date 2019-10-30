@@ -64,8 +64,10 @@ code {
   background-color: transparent;
   display: inline-block;
   color: rgba(9, 255, 45, 0.14);
-  font-size: 2em;
+     font-size: 0.5em;
+    font-size: 2vw;
 }
+
 .code {
   position: absolute;
   top: 300px;
